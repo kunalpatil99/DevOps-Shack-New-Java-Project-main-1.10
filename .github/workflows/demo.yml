@@ -13,11 +13,11 @@ jobs:
     - name: Print Hello
       run: echo "Hello from Github Actions"
       
-    - name: Print message
-      run: echo "Hello"
+    - name: Checkout repository
+      run: actions/checkout@v7
       
-    - name: Print Hi
-      run: echo "Hi"
+    - name: Show repository
+      run: ls -la
       
     - name: Print Bye
       run: 
