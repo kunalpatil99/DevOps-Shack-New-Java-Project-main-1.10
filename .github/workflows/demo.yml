@@ -20,4 +20,7 @@ jobs:
       run: echo "Hi"
       
     - name: Print Bye
-      run: echo "Bye"
+      run: 
+        pwd
+        ls -l
+        whoami
