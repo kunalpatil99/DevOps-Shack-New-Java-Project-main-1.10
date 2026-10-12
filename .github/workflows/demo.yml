@@ -12,3 +12,12 @@ jobs:
     steps:
     - name: Print Hello
       run: echo "Hello from Github Actions"
+      
+    - name: Print message
+      run: echo "Hello"
+      
+    - name: Print Hi
+      run: echo "Hi"
+      
+    - name: Print Bye
+      run: echo "Bye"
