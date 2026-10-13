@@ -24,6 +24,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+          cache: maven
       - run: java --version
       
       - name: Compile
@@ -39,6 +40,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+          cache: maven
       - run: java --version
       
       - name: test
@@ -54,7 +56,8 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+          cache: maven
       - run: java --version
       
       - name: build
-        run: mvn packhage
+        run: mvn package
