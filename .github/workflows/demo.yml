@@ -47,7 +47,7 @@ jobs:
 
   information:
 
-    runs-on: ubuntu-latest
+    runs-on: devops-shack
 
     steps:
 
@@ -64,7 +64,7 @@ jobs:
 
     needs: information
 
-    runs-on: ubuntu-latest
+    runs-on: devops-shack
 
     timeout-minutes: 10
 
