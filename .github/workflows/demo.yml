@@ -8,7 +8,17 @@ env:
   APP_NAME: DevOps-Shack-App
 
 jobs:
+  test:
+      runs-on: ubuntu-latest
+  
+      steps:
+        - name: Test
+          run: |
+            echo "Testing Application..."
+            sleep 5
+            
   build:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
@@ -17,11 +27,12 @@ jobs:
           echo "Building Application..."
           sleep 5
 
-  test:
+  deploy:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test
+      - name: deploy
         run: |
-          echo "Testing Application..."
+          echo "Building Application..."
           sleep 5
