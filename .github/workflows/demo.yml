@@ -2,18 +2,15 @@
 name: My first github actions workflow
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+
+env:
+  APP_NAME: DevOps-Shack-App
 
 jobs:
-  context-demo:
+  demo:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show GitHub Information
-        run: |
-          echo "Repository: ${{ github.repository }}"
-          echo "Triggered by: ${{ github.actor }}"
-          echo "Branch/Ref: ${{ github.ref }}"
-          echo "Commit: ${{ github.sha }}"
-          echo "Event: ${{ github.event_name }}"
-          echo "Workflow: ${{ github.workflow }}"
+      - name: Print Variable
+        run: echo "Application is $APP_NAME"
