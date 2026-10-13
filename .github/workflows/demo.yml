@@ -2,7 +2,9 @@
 name: My first github actions workflow
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   APP_NAME: DevOps-Shack-App
