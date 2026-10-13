@@ -5,22 +5,15 @@ on:
   workflow_dispatch: 
 
 jobs:
-  hello:
-
+  context-demo:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print Hello
-      run: echo "Hello from Github Actions"
-      
-    - name: Checkout repository
-      uses: actions/checkout@v7
-      
-    - name: Show repository
-      run: ls -la
-      
-    - name: Print Bye
-      run: |
-        pwd
-        ls -l
-        whoami
+      - name: Show GitHub Information
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Branch/Ref: ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Event: ${{ github.event_name }}"
+          echo "Workflow: ${{ github.workflow }}"
