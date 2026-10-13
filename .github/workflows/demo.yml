@@ -2,11 +2,9 @@
 name: My first github actions workflow
 
 on:
-  push:
+  pull_request: :
     branches:
       - main
-    paths:
-      - 'src/**'
 
 env:
   APP_NAME: DevOps-Shack-App
