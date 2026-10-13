@@ -8,9 +8,20 @@ env:
   APP_NAME: DevOps-Shack-App
 
 jobs:
-  demo:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Variable
-        run: echo "Application is $APP_NAME"
+      - name: Build
+        run: |
+          echo "Building Application..."
+          sleep 5
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        run: |
+          echo "Testing Application..."
+          sleep 5
